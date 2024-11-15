@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_settings_mains",
+  "info": {
+    "displayName": "Main"
+  },
+  "options": {},
+  "attributes": {
+    "site_title": {
+      "type": "string"
+    },
+    "site_short_title": {
+      "type": "string"
+    },
+    "site_description": {
+      "type": "text"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
