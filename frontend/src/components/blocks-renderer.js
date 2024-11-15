@@ -46,31 +46,31 @@ export const query = graphql`
         }
       }
     }
-    # ... on STRAPI__COMPONENT_SHARED_MEDIA {
-    #   file {
-    #     mime
-    #     localFile {
-    #       childImageSharp {
-    #         gatsbyImageData
-    #       }
-    #     }
-    #   }
-    # }
-    # ... on STRAPI__COMPONENT_SHARED_QUOTE {
-    #   title
-    #   quoteBody: body
-    # }
-    # ... on STRAPI__COMPONENT_SHARED_SLIDER {
-    #   files {
-    #     id
-    #     mime
-    #     localFile {
-    #       childImageSharp {
-    #         gatsbyImageData
-    #       }
-    #     }
-    #   }
-    # }
+    ... on STRAPI__COMPONENT_SHARED_MEDIA {
+      file {
+        mime
+        localFile {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+      }
+    }
+    ... on STRAPI__COMPONENT_SHARED_QUOTE {
+      title
+      quoteBody: body
+    }
+    ... on STRAPI__COMPONENT_SHARED_SLIDER {
+      files {
+        id
+        mime
+        localFile {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+      }
+    }
   }
 `;
 

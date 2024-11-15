@@ -1,8 +1,4 @@
 var plugins = [{
-      name: 'gatsby-plugin-gatsby-cloud',
-      plugin: require('/Applications/Projects/eclassThesis/strapi-app/frontend/node_modules/gatsby-plugin-gatsby-cloud/gatsby-ssr.js'),
-      options: {"plugins":[]},
-    },{
       name: 'gatsby-plugin-image',
       plugin: require('/Applications/Projects/eclassThesis/strapi-app/frontend/node_modules/gatsby-plugin-image/gatsby-ssr.js'),
       options: {"plugins":[]},

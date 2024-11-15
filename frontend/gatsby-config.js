@@ -4,19 +4,18 @@ require("dotenv").config({
 
 module.exports = {
   plugins: [
-    "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-postcss",
     {
       resolve: "gatsby-source-strapi",
       options: {
-        apiURL: process.env.STRAPI_API_URL || "https://127.0.0.1:1337",
+        apiURL: process.env.STRAPI_API_URL || "http://127.0.0.1:1337",
         accessToken: process.env.STRAPI_TOKEN,
         collectionTypes: [
           {
             singularName: "article",
             queryParams: {
-              publicationState:
-                process.env.GATSBY_IS_PREVIEW === "true" ? "preview" : "live",
+              // publicationState:
+              //   process.env.GATSBY_IS_PREVIEW === "true" ? "preview" : "live",
               populate: {
                 cover: "*",
                 blocks: {
