@@ -2800,22 +2800,69 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/HomeIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/UsersIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/FolderIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/CalendarIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/InboxIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/ChartBarIcon.js");
 
 
+
+const navigation = [{
+  name: "Dashboard",
+  href: "#",
+  icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_2__["default"],
+  current: true,
+  count: "5"
+}, {
+  name: "Team",
+  href: "#",
+  icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_3__["default"],
+  current: false
+}, {
+  name: "Projects",
+  href: "#",
+  icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__["default"],
+  current: false,
+  count: "19"
+}, {
+  name: "Calendar",
+  href: "#",
+  icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"],
+  current: false,
+  count: "20+"
+}, {
+  name: "Documents",
+  href: "#",
+  icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__["default"],
+  current: false
+}, {
+  name: "Reports",
+  href: "#",
+  icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__["default"],
+  current: false
+}];
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
 const Navbar = () => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("header", {
-    className: "bg-primary-200"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("nav", {
-    className: "container flex flex-row items-baseline justify-between py-6"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    to: "/",
-    className: "text-xl font-medium"
-  }, "Blog"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
-    className: "flex flex-row items-baseline justify-end"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_0__.Link, {
-    className: "font-medium",
-    to: "/about"
-  }, "About"))));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("nav", {
+    className: "space-y-1",
+    "aria-label": "Sidebar"
+  }, navigation.map(item => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("a", {
+    key: item.name,
+    href: item.href,
+    className: classNames(item.current ? "bg-gray-200 text-gray-900" : "text-gray-600 hover:bg-gray-50 hover:text-gray-900", "flex items-center rounded-md px-3 py-2 text-sm font-medium"),
+    "aria-current": item.current ? "page" : undefined
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(item.icon, {
+    className: classNames(item.current ? "text-gray-500" : "text-gray-400", "-ml-1 mr-3 h-6 w-6 flex-shrink-0"),
+    "aria-hidden": "true"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("span", {
+    className: "truncate"
+  }, item.name), item.count ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("span", {
+    className: classNames(item.current ? "bg-gray-50" : "bg-gray-200 text-gray-600", "ml-auto inline-block rounded-full px-3 py-0.5 text-xs")
+  }, item.count) : null)));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Navbar);
 
@@ -2932,7 +2979,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _public_page_data_sq_d_3698145198_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../public/page-data/sq/d/3698145198.json */ "./public/page-data/sq/d/3698145198.json");
+/* harmony import */ var _public_page_data_sq_d_960431041_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../public/page-data/sq/d/960431041.json */ "./public/page-data/sq/d/960431041.json");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/layout */ "./src/components/layout.js");
@@ -2947,8 +2994,9 @@ __webpack_require__.r(__webpack_exports__);
 
 const IndexPage = () => {
   const {
+    allStrapiArticle,
     strapiGlobal
-  } = _public_page_data_sq_d_3698145198_json__WEBPACK_IMPORTED_MODULE_0__.data;
+  } = _public_page_data_sq_d_960431041_json__WEBPACK_IMPORTED_MODULE_0__.data;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_components_layout__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_components_seo__WEBPACK_IMPORTED_MODULE_4__["default"], {
     seo: {
       metaTitle: "Home"
@@ -2956,7 +3004,9 @@ const IndexPage = () => {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_components_headings__WEBPACK_IMPORTED_MODULE_5__["default"], {
     title: strapiGlobal.siteName,
     description: strapiGlobal.siteDescription
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h1", null, "test")));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_components_articles_grid__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    articles: allStrapiArticle.nodes
+  })));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IndexPage);
 
@@ -4320,6 +4370,252 @@ module.exports = _setPrototypeOf, module.exports.__esModule = true, module.expor
 
 /***/ }),
 
+/***/ "./node_modules/@heroicons/react/24/outline/esm/CalendarIcon.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@heroicons/react/24/outline/esm/CalendarIcon.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+
+function CalendarIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "none",
+    viewBox: "0 0 24 24",
+    strokeWidth: 1.5,
+    stroke: "currentColor",
+    "aria-hidden": "true",
+    "data-slot": "icon",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    d: "M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"
+  }));
+}
+const ForwardRef = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(CalendarIcon);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ForwardRef);
+
+/***/ }),
+
+/***/ "./node_modules/@heroicons/react/24/outline/esm/ChartBarIcon.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@heroicons/react/24/outline/esm/ChartBarIcon.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+
+function ChartBarIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "none",
+    viewBox: "0 0 24 24",
+    strokeWidth: 1.5,
+    stroke: "currentColor",
+    "aria-hidden": "true",
+    "data-slot": "icon",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    d: "M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z"
+  }));
+}
+const ForwardRef = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(ChartBarIcon);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ForwardRef);
+
+/***/ }),
+
+/***/ "./node_modules/@heroicons/react/24/outline/esm/FolderIcon.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@heroicons/react/24/outline/esm/FolderIcon.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+
+function FolderIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "none",
+    viewBox: "0 0 24 24",
+    strokeWidth: 1.5,
+    stroke: "currentColor",
+    "aria-hidden": "true",
+    "data-slot": "icon",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    d: "M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"
+  }));
+}
+const ForwardRef = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(FolderIcon);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ForwardRef);
+
+/***/ }),
+
+/***/ "./node_modules/@heroicons/react/24/outline/esm/HomeIcon.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@heroicons/react/24/outline/esm/HomeIcon.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+
+function HomeIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "none",
+    viewBox: "0 0 24 24",
+    strokeWidth: 1.5,
+    stroke: "currentColor",
+    "aria-hidden": "true",
+    "data-slot": "icon",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    d: "m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+  }));
+}
+const ForwardRef = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(HomeIcon);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ForwardRef);
+
+/***/ }),
+
+/***/ "./node_modules/@heroicons/react/24/outline/esm/InboxIcon.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@heroicons/react/24/outline/esm/InboxIcon.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+
+function InboxIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "none",
+    viewBox: "0 0 24 24",
+    strokeWidth: 1.5,
+    stroke: "currentColor",
+    "aria-hidden": "true",
+    "data-slot": "icon",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    d: "M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H6.911a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661Z"
+  }));
+}
+const ForwardRef = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(InboxIcon);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ForwardRef);
+
+/***/ }),
+
+/***/ "./node_modules/@heroicons/react/24/outline/esm/UsersIcon.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@heroicons/react/24/outline/esm/UsersIcon.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+
+function UsersIcon({
+  title,
+  titleId,
+  ...props
+}, svgRef) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", Object.assign({
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "none",
+    viewBox: "0 0 24 24",
+    strokeWidth: 1.5,
+    stroke: "currentColor",
+    "aria-hidden": "true",
+    "data-slot": "icon",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", {
+    id: titleId
+  }, title) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    d: "M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"
+  }));
+}
+const ForwardRef = /*#__PURE__*/ react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(UsersIcon);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ForwardRef);
+
+/***/ }),
+
 /***/ "./node_modules/gatsby-link/dist/index.modern.mjs":
 /*!********************************************************!*\
   !*** ./node_modules/gatsby-link/dist/index.modern.mjs ***!
@@ -4357,17 +4653,6 @@ module.exports = [];
 
 /***/ }),
 
-/***/ "./public/page-data/sq/d/3698145198.json":
-/*!***********************************************!*\
-  !*** ./public/page-data/sq/d/3698145198.json ***!
-  \***********************************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"data":{"strapiGlobal":{"siteName":"Strapi Blog","siteDescription":"A Blog made with Strapi"}}}');
-
-/***/ }),
-
 /***/ "./public/page-data/sq/d/4175596634.json":
 /*!***********************************************!*\
   !*** ./public/page-data/sq/d/4175596634.json ***!
@@ -4376,6 +4661,17 @@ module.exports = /*#__PURE__*/JSON.parse('{"data":{"strapiGlobal":{"siteName":"S
 
 "use strict";
 module.exports = /*#__PURE__*/JSON.parse('{"data":{"strapiGlobal":{"siteName":"Strapi Blog","favicon":{"localFile":{"url":"http://127.0.0.1:1337/uploads/favicon_6072b84183.png"}},"defaultSeo":{"metaTitle":"Page","metaDescription":"A blog made with Strapi","shareImage":{"localFile":{"url":"http://127.0.0.1:1337/uploads/default_image_2043c6b53c.png"}}}}}}');
+
+/***/ }),
+
+/***/ "./public/page-data/sq/d/960431041.json":
+/*!**********************************************!*\
+  !*** ./public/page-data/sq/d/960431041.json ***!
+  \**********************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = /*#__PURE__*/JSON.parse('{"data":{"allStrapiArticle":{"nodes":[{"id":"7545ac03-c6dc-5d14-8662-b8213ef531d1","slug":"the-internet-s-own-boy","title":"The internet\'s Own boy","description":"Follow the story of Aaron Swartz, the boy who could change the world","cover":{"alternativeText":"An image uploaded to Strapi called the-internet-s-own-boy","localFile":{"childImageSharp":{"gatsbyImageData":{"layout":"constrained","backgroundColor":"#180808","images":{"fallback":{"src":"/static/05b3298e7ea2e75108482fe178c5040d/4611e/the_internet_s_own_boy_da6fbc5e3b.jpg","srcSet":"/static/05b3298e7ea2e75108482fe178c5040d/a0d9b/the_internet_s_own_boy_da6fbc5e3b.jpg 300w,\\n/static/05b3298e7ea2e75108482fe178c5040d/00b4e/the_internet_s_own_boy_da6fbc5e3b.jpg 600w,\\n/static/05b3298e7ea2e75108482fe178c5040d/4611e/the_internet_s_own_boy_da6fbc5e3b.jpg 1200w","sizes":"(min-width: 1200px) 1200px, 100vw"},"sources":[{"srcSet":"/static/05b3298e7ea2e75108482fe178c5040d/dc425/the_internet_s_own_boy_da6fbc5e3b.webp 300w,\\n/static/05b3298e7ea2e75108482fe178c5040d/7802b/the_internet_s_own_boy_da6fbc5e3b.webp 600w,\\n/static/05b3298e7ea2e75108482fe178c5040d/2dc4e/the_internet_s_own_boy_da6fbc5e3b.webp 1200w","type":"image/webp","sizes":"(min-width: 1200px) 1200px, 100vw"}]},"width":1200,"height":678}}}}},{"id":"4a1498b6-ae0b-50ff-bb60-41a8de12f582","slug":"this-shrimp-is-awesome","title":"This shrimp is awesome","description":"Mantis shrimps, or stomatopods, are marine crustaceans of the order Stomatopoda.","cover":{"alternativeText":"An image uploaded to Strapi called this-shrimp-is-awesome","localFile":{"childImageSharp":{"gatsbyImageData":{"layout":"constrained","backgroundColor":"#080808","images":{"fallback":{"src":"/static/6f0e13bb06edd9d632a5b4ebd296d748/4611e/this_shrimp_is_awesome_1535cc8217.jpg","srcSet":"/static/6f0e13bb06edd9d632a5b4ebd296d748/a0d9b/this_shrimp_is_awesome_1535cc8217.jpg 300w,\\n/static/6f0e13bb06edd9d632a5b4ebd296d748/00b4e/this_shrimp_is_awesome_1535cc8217.jpg 600w,\\n/static/6f0e13bb06edd9d632a5b4ebd296d748/4611e/this_shrimp_is_awesome_1535cc8217.jpg 1200w","sizes":"(min-width: 1200px) 1200px, 100vw"},"sources":[{"srcSet":"/static/6f0e13bb06edd9d632a5b4ebd296d748/dc425/this_shrimp_is_awesome_1535cc8217.webp 300w,\\n/static/6f0e13bb06edd9d632a5b4ebd296d748/7802b/this_shrimp_is_awesome_1535cc8217.webp 600w,\\n/static/6f0e13bb06edd9d632a5b4ebd296d748/2dc4e/this_shrimp_is_awesome_1535cc8217.webp 1200w","type":"image/webp","sizes":"(min-width: 1200px) 1200px, 100vw"}]},"width":1200,"height":678}}}}},{"id":"31ec628e-0d6c-55c1-a8d6-2217acc66a50","slug":"a-bug-is-becoming-a-meme-on-the-internet","title":"A bug is becoming a meme on the internet","description":"How a bug on MySQL is becoming a meme on the internet","cover":{"alternativeText":"An image uploaded to Strapi called a-bug-is-becoming-a-meme-on-the-internet","localFile":{"childImageSharp":{"gatsbyImageData":{"layout":"constrained","backgroundColor":"#080808","images":{"fallback":{"src":"/static/e5579a432e5a2614723e92f7fef88abe/96073/a_bug_is_becoming_a_meme_on_the_internet_f6affe56b9.jpg","srcSet":"/static/e5579a432e5a2614723e92f7fef88abe/6d62e/a_bug_is_becoming_a_meme_on_the_internet_f6affe56b9.jpg 907w,\\n/static/e5579a432e5a2614723e92f7fef88abe/8027f/a_bug_is_becoming_a_meme_on_the_internet_f6affe56b9.jpg 1814w,\\n/static/e5579a432e5a2614723e92f7fef88abe/96073/a_bug_is_becoming_a_meme_on_the_internet_f6affe56b9.jpg 3628w","sizes":"(min-width: 3628px) 3628px, 100vw"},"sources":[{"srcSet":"/static/e5579a432e5a2614723e92f7fef88abe/54e53/a_bug_is_becoming_a_meme_on_the_internet_f6affe56b9.webp 907w,\\n/static/e5579a432e5a2614723e92f7fef88abe/f9df6/a_bug_is_becoming_a_meme_on_the_internet_f6affe56b9.webp 1814w,\\n/static/e5579a432e5a2614723e92f7fef88abe/853d8/a_bug_is_becoming_a_meme_on_the_internet_f6affe56b9.webp 3628w","type":"image/webp","sizes":"(min-width: 3628px) 3628px, 100vw"}]},"width":3628,"height":2050}}}}},{"id":"257add35-b2e9-5de9-be03-9d0c7583b9e2","slug":"beautiful-picture","title":"Beautiful picture","description":"Description of a beautiful picture","cover":{"alternativeText":"An image uploaded to Strapi called beautiful-picture","localFile":{"childImageSharp":{"gatsbyImageData":{"layout":"constrained","backgroundColor":"#081818","images":{"fallback":{"src":"/static/9d86415c419ab2108ce7026df00116b6/4272e/beautiful_picture_e52ece03b7.jpg","srcSet":"/static/9d86415c419ab2108ce7026df00116b6/2b362/beautiful_picture_e52ece03b7.jpg 956w,\\n/static/9d86415c419ab2108ce7026df00116b6/5997e/beautiful_picture_e52ece03b7.jpg 1912w,\\n/static/9d86415c419ab2108ce7026df00116b6/4272e/beautiful_picture_e52ece03b7.jpg 3824w","sizes":"(min-width: 3824px) 3824px, 100vw"},"sources":[{"srcSet":"/static/9d86415c419ab2108ce7026df00116b6/ab9f3/beautiful_picture_e52ece03b7.webp 956w,\\n/static/9d86415c419ab2108ce7026df00116b6/6bf29/beautiful_picture_e52ece03b7.webp 1912w,\\n/static/9d86415c419ab2108ce7026df00116b6/840d4/beautiful_picture_e52ece03b7.webp 3824w","type":"image/webp","sizes":"(min-width: 3824px) 3824px, 100vw"}]},"width":3824,"height":2160}}}}},{"id":"40318be6-4d3f-5c6a-8ae5-5c1b328b1c04","slug":"what-s-inside-a-black-hole","title":"What\'s inside a Black Hole","description":"Maybe the answer is in this article, or not...","cover":{"alternativeText":"An image uploaded to Strapi called what-s-inside-a-black-hole","localFile":{"childImageSharp":{"gatsbyImageData":{"layout":"constrained","backgroundColor":"#080808","images":{"fallback":{"src":"/static/4c516f33e6e3298ce7a5e312da05d070/c470b/what_s_inside_a_black_hole_57b48e7bd3.jpg","srcSet":"/static/4c516f33e6e3298ce7a5e312da05d070/1bf32/what_s_inside_a_black_hole_57b48e7bd3.jpg 200w,\\n/static/4c516f33e6e3298ce7a5e312da05d070/19ad5/what_s_inside_a_black_hole_57b48e7bd3.jpg 400w,\\n/static/4c516f33e6e3298ce7a5e312da05d070/c470b/what_s_inside_a_black_hole_57b48e7bd3.jpg 800w","sizes":"(min-width: 800px) 800px, 100vw"},"sources":[{"srcSet":"/static/4c516f33e6e3298ce7a5e312da05d070/b6124/what_s_inside_a_black_hole_57b48e7bd3.webp 200w,\\n/static/4c516f33e6e3298ce7a5e312da05d070/09f8f/what_s_inside_a_black_hole_57b48e7bd3.webp 400w,\\n/static/4c516f33e6e3298ce7a5e312da05d070/cee7b/what_s_inside_a_black_hole_57b48e7bd3.webp 800w","type":"image/webp","sizes":"(min-width: 800px) 800px, 100vw"}]},"width":800,"height":452}}}}}]},"strapiGlobal":{"siteName":"Strapi Blog","siteDescription":"A Blog made with Strapi"}}}');
 
 /***/ })
 

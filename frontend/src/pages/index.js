@@ -29,7 +29,6 @@ const IndexPage = () => {
       />
       <main>
         <ArticlesGrid articles={allStrapiArticle.nodes} />
-        {/* <h1>test</h1> */}
       </main>
     </Layout>
   );
