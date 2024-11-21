@@ -3218,8 +3218,12 @@ const Layout = ({
   children
 }) => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "flex min-h-screen flex-col justify-between bg-neutral-50 text-neutral-900"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_navbar__WEBPACK_IMPORTED_MODULE_2__["default"], null), children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_footer__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+    className: "flex min-h-screen justify-between text-neutral-900"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "w-1/4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_navbar__WEBPACK_IMPORTED_MODULE_2__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "w-3/4"
+  }, children));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Layout);
 
@@ -3239,47 +3243,50 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/HomeIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/UsersIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/FolderIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/CalendarIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/InboxIcon.js");
-/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/ChartBarIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/HomeIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/UsersIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/FolderIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/CalendarIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/InboxIcon.js");
+/* harmony import */ var _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @heroicons/react/24/outline */ "./node_modules/@heroicons/react/24/outline/esm/ChartBarIcon.js");
+/* harmony import */ var _styles_navigation_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/navigation.css */ "./src/styles/navigation.css");
+/* harmony import */ var _styles_navigation_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_navigation_css__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
 const navigation = [{
   name: "Dashboard",
   href: "#",
-  icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_2__["default"],
+  icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_3__["default"],
   current: true,
   count: "5"
 }, {
   name: "Team",
   href: "#",
-  icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_3__["default"],
+  icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__["default"],
   current: false
 }, {
   name: "Projects",
   href: "#",
-  icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_4__["default"],
+  icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"],
   current: false,
   count: "19"
 }, {
   name: "Calendar",
   href: "#",
-  icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_5__["default"],
+  icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__["default"],
   current: false,
   count: "20+"
 }, {
   name: "Documents",
   href: "#",
-  icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_6__["default"],
+  icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__["default"],
   current: false
 }, {
   name: "Reports",
   href: "#",
-  icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_7__["default"],
+  icon: _heroicons_react_24_outline__WEBPACK_IMPORTED_MODULE_8__["default"],
   current: false
 }];
 function classNames(...classes) {
@@ -3287,7 +3294,7 @@ function classNames(...classes) {
 }
 const Navbar = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("nav", {
-    className: "space-y-1",
+    className: "bg-color h-full space-y-1",
     "aria-label": "Sidebar"
   }, navigation.map(item => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("a", {
     key: item.name,
@@ -4014,6 +4021,16 @@ function mitt(all                 ) {
 /*!*****************************************************!*\
   !*** ./node_modules/slick-carousel/slick/slick.css ***!
   \*****************************************************/
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ "./src/styles/navigation.css":
+/*!***********************************!*\
+  !*** ./src/styles/navigation.css ***!
+  \***********************************/
 /***/ (() => {
 
 

@@ -1,5 +1,16 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface SharedUserInfo extends Schema.Component {
+  collectionName: 'components_shared_user_infos';
+  info: {
+    displayName: 'UserInfo';
+    icon: 'user';
+  };
+  attributes: {
+    greeting: Attribute.String & Attribute.DefaultTo<'Hello,'>;
+  };
+}
+
 export interface SharedSlider extends Schema.Component {
   collectionName: 'components_shared_sliders';
   info: {
@@ -65,6 +76,7 @@ export interface SharedMedia extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'shared.user-info': SharedUserInfo;
       'shared.slider': SharedSlider;
       'shared.seo': SharedSeo;
       'shared.rich-text': SharedRichText;

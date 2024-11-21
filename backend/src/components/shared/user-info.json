@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_user_infos",
+  "info": {
+    "displayName": "UserInfo",
+    "icon": "user"
+  },
+  "options": {},
+  "attributes": {
+    "greeting": {
+      "type": "string",
+      "default": "Hello,"
+    }
+  }
+}
