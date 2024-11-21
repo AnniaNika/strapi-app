@@ -53,6 +53,20 @@ module.exports = {
               },
             },
           },
+          {
+            singularName: "homepage",
+            queryParams: {
+              populate: {
+                Blocks: {
+                  populate: {
+                    UserInfo: {
+                      populate: "*",
+                    },
+                  },
+                },
+              },
+            },
+          },
         ],
       },
     },
