@@ -62,6 +62,47 @@ export interface SharedQuote extends Schema.Component {
   };
 }
 
+export interface SharedMeta extends Schema.Component {
+  collectionName: 'components_shared_metas';
+  info: {
+    displayName: 'meta';
+    icon: 'command';
+  };
+  attributes: {
+    metaTitle: Attribute.String;
+    metaDescription: Attribute.Text;
+    metaImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface SharedMenuItem extends Schema.Component {
+  collectionName: 'components_shared_menu_items';
+  info: {
+    displayName: 'MenuItem';
+    icon: 'plus';
+  };
+  attributes: {
+    label: Attribute.String;
+  };
+}
+
+export interface SharedMenuColumn extends Schema.Component {
+  collectionName: 'components_shared_menu_columns';
+  info: {
+    displayName: 'MenuColumn';
+    icon: 'bold';
+  };
+  attributes: {
+    label: Attribute.String;
+    page: Attribute.Relation<
+      'shared.menu-column',
+      'oneToOne',
+      'api::page.page'
+    >;
+    navSlug: Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Schema.Component {
   collectionName: 'components_shared_media';
   info: {
@@ -73,6 +114,19 @@ export interface SharedMedia extends Schema.Component {
   };
 }
 
+export interface SharedItem extends Schema.Component {
+  collectionName: 'components_shared_items';
+  info: {
+    displayName: 'Item';
+    icon: 'bold';
+  };
+  attributes: {
+    label: Attribute.String;
+    page: Attribute.Relation<'shared.item', 'oneToOne', 'api::page.page'>;
+    navSlug: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -81,7 +135,11 @@ declare module '@strapi/types' {
       'shared.seo': SharedSeo;
       'shared.rich-text': SharedRichText;
       'shared.quote': SharedQuote;
+      'shared.meta': SharedMeta;
+      'shared.menu-item': SharedMenuItem;
+      'shared.menu-column': SharedMenuColumn;
       'shared.media': SharedMedia;
+      'shared.item': SharedItem;
     }
   }
 }

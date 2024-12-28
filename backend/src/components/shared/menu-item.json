@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_menu_items",
+  "info": {
+    "displayName": "MenuItem",
+    "icon": "plus"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    }
+  }
+}

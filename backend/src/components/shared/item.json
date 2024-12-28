@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_items",
+  "info": {
+    "displayName": "Item",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "page": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::page.page"
+    },
+    "navSlug": {
+      "type": "string"
+    }
+  }
+}

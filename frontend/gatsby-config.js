@@ -30,6 +30,33 @@ module.exports = {
           {
             singularName: "category",
           },
+          {
+            singularName: "page",
+            queryParams: {
+              populate: {
+                Content: {
+                  populate: {
+                    slug: {
+                      populate: "*",
+                    },
+                    pageTitle: {
+                      populate: "*",
+                    },
+                    meta: { populate: "*" },
+                    metaTitle: {
+                      populate: "*",
+                    },
+                    metaDescription: {
+                      populate: "*",
+                    },
+                    metaImage: {
+                      populate: "*",
+                    },
+                  },
+                },
+              },
+            },
+          },
         ],
         singleTypes: [
           {
@@ -47,6 +74,7 @@ module.exports = {
             queryParams: {
               populate: {
                 favicon: "*",
+                logo: "*",
                 defaultSeo: {
                   populate: "*",
                 },
