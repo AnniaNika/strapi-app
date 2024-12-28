@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_login_forms",
+  "info": {
+    "displayName": "Login Form",
+    "icon": "information"
+  },
+  "options": {},
+  "attributes": {
+    "registerForm": {
+      "type": "boolean"
+    }
+  }
+}

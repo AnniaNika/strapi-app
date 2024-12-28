@@ -114,6 +114,17 @@ export interface SharedMedia extends Schema.Component {
   };
 }
 
+export interface SharedLoginForm extends Schema.Component {
+  collectionName: 'components_shared_login_forms';
+  info: {
+    displayName: 'Login Form';
+    icon: 'information';
+  };
+  attributes: {
+    registerForm: Attribute.Boolean;
+  };
+}
+
 export interface SharedItem extends Schema.Component {
   collectionName: 'components_shared_items';
   info: {
@@ -139,6 +150,7 @@ declare module '@strapi/types' {
       'shared.menu-item': SharedMenuItem;
       'shared.menu-column': SharedMenuColumn;
       'shared.media': SharedMedia;
+      'shared.login-form': SharedLoginForm;
       'shared.item': SharedItem;
     }
   }
