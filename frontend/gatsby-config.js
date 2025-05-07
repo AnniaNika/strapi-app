@@ -1,6 +1,6 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-});
+})
 
 module.exports = {
   plugins: [
@@ -95,6 +95,37 @@ module.exports = {
               },
             },
           },
+          {
+            singularName: "navigation",
+            queryParams: {
+              populate: {
+                NavigationColumn: {
+                  populate: {
+                    Item: {
+                      populate: "*",
+                    },
+                  },
+                },
+              },
+            },
+          },
+          {
+            singularName: "login",
+            queryParams: {
+              populate: {
+                Blocks: {
+                  populate: {
+                    LoginForm: {
+                      populate: "*",
+                    },
+                  },
+                },
+                Image: {
+                  populate: "*",
+                },
+              },
+            },
+          },
         ],
       },
     },
@@ -102,5 +133,6 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-transformer-remark",
+    "gatsby-plugin-sass",
   ],
-};
+}
