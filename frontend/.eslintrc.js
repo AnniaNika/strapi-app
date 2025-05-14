@@ -1,19 +1,16 @@
 module.exports = {
-  globals: {
-    __PATH_PREFIX__: true,
-  },
-  extends: ["react-app", "prettier"],
+  extends: ["react-app", "plugin:prettier/recommended"],
   plugins: ["prettier"],
   rules: {
     "prettier/prettier": [
       "error",
       {
-        printWidth: 80,
+        semi: true,
         singleQuote: false,
-        trailingComma: "es5",
-        semi: false,
-        tabWidth: 2,
+        trailingComma: "all",
+        arrowParens: "always",
+        endOfLine: "auto",
       },
     ],
   },
-}
+};

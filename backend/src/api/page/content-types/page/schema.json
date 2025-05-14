@@ -14,9 +14,7 @@
   "attributes": {
     "Content": {
       "type": "dynamiczone",
-      "components": [
-        "shared.meta"
-      ]
+      "components": ["shared.meta"]
     },
     "slug": {
       "type": "uid"

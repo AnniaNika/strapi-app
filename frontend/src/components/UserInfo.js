@@ -1,10 +1,10 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import "../styles/user-info.scss"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import "../styles/user-info.scss";
 
 const UserInfo = ({ block }) => {
-  const { greeting, id, strapi_component } = block
+  const { greeting, id, strapi_component } = block;
   // console.log("block", block);
 
   return (
@@ -13,8 +13,8 @@ const UserInfo = ({ block }) => {
         <h3>{greeting} user_id</h3>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export const query = graphql`
   fragment ArticleCard on STRAPI_ARTICLE {
@@ -31,6 +31,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default UserInfo
+export default UserInfo;

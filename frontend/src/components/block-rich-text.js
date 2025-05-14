@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const BlockRichText = ({ data }) => {
   return (
@@ -9,7 +9,7 @@ const BlockRichText = ({ data }) => {
         }}
       />
     </div>
-  )
-}
+  );
+};
 
-export default BlockRichText
+export default BlockRichText;

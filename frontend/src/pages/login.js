@@ -1,8 +1,8 @@
-import React, { useState } from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import axios from "axios"
-import "../styles/login-page.scss"
+import React, { useState } from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import axios from "axios";
+import "../styles/login-page.scss";
 
 const LoginPage = () => {
   const { nodes } = useStaticQuery(graphql`
@@ -25,32 +25,32 @@ const LoginPage = () => {
         }
       }
     }
-  `).allStrapiLogin
+  `).allStrapiLogin;
 
-  const { Image } = nodes[0]
+  const { Image } = nodes[0];
 
-  const [isRegistering, setIsRegistering] = useState(false)
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [username, setUsername] = useState("")
+  const [isRegistering, setIsRegistering] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
 
-  const API_URL = "http://localhost:1337/api/auth/local"
+  const API_URL = "http://localhost:1337/api/auth/local";
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     try {
       const response = await axios.post(
         isRegistering ? `${API_URL}/register` : API_URL,
         isRegistering
           ? { username, email, password }
-          : { identifier: email, password }
-      )
-      localStorage.setItem("jwt", response.data.jwt)
-      alert(`Success! Welcome ${response.data.user.username}`)
+          : { identifier: email, password },
+      );
+      localStorage.setItem("jwt", response.data.jwt);
+      alert(`Success! Welcome ${response.data.user.username}`);
     } catch (error) {
-      alert("Error: " + error.response.data.error.message)
+      alert("Error: " + error.response.data.error.message);
     }
-  }
+  };
 
   return (
     <div className="login-page flex min-h-screen items-center justify-center">
@@ -132,7 +132,7 @@ const LoginPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LoginPage
+export default LoginPage;

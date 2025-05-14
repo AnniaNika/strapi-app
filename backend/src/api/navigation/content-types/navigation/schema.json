@@ -13,9 +13,7 @@
   "attributes": {
     "NavigationColumn": {
       "type": "dynamiczone",
-      "components": [
-        "shared.item"
-      ]
+      "components": ["shared.item"]
     }
   }
 }

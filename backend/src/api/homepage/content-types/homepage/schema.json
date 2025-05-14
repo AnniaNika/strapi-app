@@ -13,9 +13,7 @@
   "attributes": {
     "Blocks": {
       "type": "dynamiczone",
-      "components": [
-        "shared.user-info"
-      ]
+      "components": ["shared.user-info"]
     }
   }
 }

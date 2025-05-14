@@ -1,14 +1,14 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Layout from "../components/layout"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Layout from "../components/layout";
 // import ArticlesGrid from "../components/articles-grid";
-import Seo from "../components/seo"
+import Seo from "../components/seo";
 // import Headings from "../components/headings";
-import UserInfo from "../components/UserInfo"
+import UserInfo from "../components/UserInfo";
 
 const IndexPage = ({ data }) => {
-  const { Blocks } = data.page
-  console.log("data", data)
+  const { Blocks } = data.page;
+  console.log("data", data);
 
   // const { allStrapiArticle, strapiGlobal } = useStaticQuery(graphql`
   //   query {
@@ -35,18 +35,18 @@ const IndexPage = ({ data }) => {
         {Blocks?.map((block) => {
           switch (block.strapi_component) {
             case "shared.user-info":
-              return <UserInfo block={block} key={block.id} />
+              return <UserInfo block={block} key={block.id} />;
             default:
-              return null
+              return null;
             // break
           }
         })}
       </main>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
   query homepageQuery {
@@ -60,4 +60,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

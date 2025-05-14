@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
 /**
  * login controller
  */
 
-const { createCoreController } = require('@strapi/strapi').factories;
+const { createCoreController } = require("@strapi/strapi").factories;
 
-module.exports = createCoreController('api::login.login');
+module.exports = createCoreController("api::login.login");

@@ -1,6 +1,6 @@
-import { Link } from "gatsby"
-import React from "react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { Link } from "gatsby";
+import React from "react";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import {
   CalendarIcon,
   ChartBarIcon,
@@ -8,8 +8,8 @@ import {
   HomeIcon,
   InboxIcon,
   UsersIcon,
-} from "@heroicons/react/24/outline"
-import "../styles/navigation.scss"
+} from "@heroicons/react/24/outline";
+import "../styles/navigation.scss";
 
 const navigation = [
   { name: "Dashboard", href: "#", icon: HomeIcon, current: true, count: "5" },
@@ -30,15 +30,15 @@ const navigation = [
   },
   { name: "Documents", href: "#", icon: InboxIcon, current: false },
   { name: "Reports", href: "#", icon: ChartBarIcon, current: false },
-]
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ")
+  return classes.filter(Boolean).join(" ");
 }
 
 const Navbar = ({ data, global }) => {
-  console.log("data", data)
-  console.log("global", global[0])
+  console.log("data", data);
+  console.log("global", global[0]);
 
   return (
     <nav className="h-full space-y-1" aria-label="Sidebar">
@@ -84,14 +84,14 @@ const Navbar = ({ data, global }) => {
               item.current
                 ? "bg-gray-200 text-gray-900"
                 : "text-gray-600 hover:bg-gray-50 hover:text-gray-900",
-              "mb-3 flex items-center rounded-md px-3 py-2 text-sm font-medium"
+              "mb-3 flex items-center rounded-md px-3 py-2 text-sm font-medium",
             )}
             aria-current={item.current ? "page" : undefined}
           >
             <item.icon
               className={classNames(
                 item.current ? "text-gray-500" : "text-gray-400",
-                "-ml-1 mr-3 h-6 w-6 flex-shrink-0"
+                "-ml-1 mr-3 h-6 w-6 flex-shrink-0",
               )}
               aria-hidden="true"
             />
@@ -100,7 +100,7 @@ const Navbar = ({ data, global }) => {
               <span
                 className={classNames(
                   item.current ? "bg-gray-50" : "bg-gray-200 text-gray-600",
-                  "ml-auto inline-block rounded-full px-3 py-0.5 text-xs"
+                  "ml-auto inline-block rounded-full px-3 py-0.5 text-xs",
                 )}
               >
                 {item.count}
@@ -110,7 +110,7 @@ const Navbar = ({ data, global }) => {
         ))}
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
