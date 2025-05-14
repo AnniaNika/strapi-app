@@ -8,7 +8,6 @@ import BlockSlider from "./block-slider";
 const componentsMap = {
   STRAPI__COMPONENT_SHARED_RICH_TEXT: BlockRichText,
   STRAPI__COMPONENT_SHARED_MEDIA: BlockMedia,
-  STRAPI__COMPONENT_SHARED_QUOTE: BlockQuote,
   STRAPI__COMPONENT_SHARED_SLIDER: BlockSlider,
 };
 
@@ -33,7 +32,7 @@ const BlocksRenderer = ({ blocks }) => {
 };
 
 export const query = graphql`
-  fragment Blocks on STRAPI__COMPONENT_SHARED_MEDIASTRAPI__COMPONENT_SHARED_QUOTESTRAPI__COMPONENT_SHARED_RICH_TEXTSTRAPI__COMPONENT_SHARED_SLIDERUnion {
+  fragment Blocks on STRAPI__COMPONENT_SHARED_BLOCKS {
     __typename
     ... on STRAPI__COMPONENT_SHARED_RICH_TEXT {
       richTextBody: body {
@@ -55,10 +54,6 @@ export const query = graphql`
           }
         }
       }
-    }
-    ... on STRAPI__COMPONENT_SHARED_QUOTE {
-      title
-      quoteBody: body
     }
     ... on STRAPI__COMPONENT_SHARED_SLIDER {
       files {
