@@ -130,11 +130,13 @@ export interface SharedItem extends Schema.Component {
   info: {
     displayName: 'Item';
     icon: 'bold';
+    description: '';
   };
   attributes: {
     label: Attribute.String;
     page: Attribute.Relation<'shared.item', 'oneToOne', 'api::page.page'>;
     navSlug: Attribute.String;
+    icon: Attribute.Media<'images'>;
   };
 }
 
