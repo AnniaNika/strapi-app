@@ -1,9 +1,15 @@
 module.exports = [
-  "strapi::logger",
   "strapi::errors",
   "strapi::security",
-  "strapi::cors",
+  {
+    name: "strapi::cors",
+    config: {
+      origin: ["https://e-classthesis.netlify.app/"],
+      credentials: true,
+    },
+  },
   "strapi::poweredBy",
+  "strapi::logger",
   "strapi::query",
   "strapi::body",
   "strapi::session",

@@ -10,6 +10,7 @@ const {
   articles,
   global,
   about,
+  // @ts-ignore
 } = require("../data/data.json");
 
 async function isFirstRun() {
@@ -91,6 +92,7 @@ async function uploadFile(file, name) {
 async function createEntry({ model, entry }) {
   try {
     // Actually create the entry in Strapi
+    // @ts-ignore
     await strapi.entityService.create(`api::${model}.${model}`, {
       data: entry,
     });

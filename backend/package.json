@@ -30,7 +30,8 @@
     "styled-components": "5.3.3"
   },
   "devDependencies": {
-    "@swc/core": "^1.9.2"
+    "@swc/core": "^1.9.2",
+    "@types/connect": "^3.4.38"
   },
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
