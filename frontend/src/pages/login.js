@@ -55,21 +55,14 @@ const LoginPage = () => {
   return (
     <div className="login-page flex min-h-screen items-center justify-center">
       <div className="flex w-full max-w-6xl overflow-hidden rounded-lg bg-white shadow-lg">
-        {/* Left Section */}
         <div className="wrapper hidden w-1/2 flex-col items-center justify-center p-6 text-white md:flex">
           <GatsbyImage
             image={getImage(Image?.localFile)}
             alt="login image"
             className="mb-4"
           />
-          <h3 className="text-xl font-semibold">Exam Mastery Hub</h3>
-          <p className="text-center text-sm">
-            Unleash Your Academic Success with Exam Mastery Hub's Exam
-            Excellence Platform.
-          </p>
         </div>
 
-        {/* Right Section */}
         <div className="w-full p-8 md:w-1/2">
           <h2 className="mb-4 text-center text-2xl font-bold">
             University Hub

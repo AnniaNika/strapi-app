@@ -27,9 +27,7 @@ const Layout = ({ children }) => {
           }
           logo {
             localFile {
-              childImageSharp {
-                gatsbyImageData(placeholder: BLURRED)
-              }
+              url
             }
           }
         }

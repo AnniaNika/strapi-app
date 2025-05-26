@@ -65,7 +65,7 @@ const Seo = ({ seo = {} }) => {
       );
     }
     if (fullSeo.shareImage) {
-      const imageUrl = fullSeo.shareImage.localFile.url;
+      const imageUrl = fullSeo?.shareImage?.localFile?.url;
       tags.push(
         {
           name: "image",
@@ -100,7 +100,7 @@ const Seo = ({ seo = {} }) => {
       link={[
         {
           rel: "icon",
-          href: favicon.localFile.url,
+          href: favicon?.localFile?.url,
         },
       ]}
       meta={metaTags}

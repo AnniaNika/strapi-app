@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => {
   //       siteDescription
   //     }
   //   }
-  // `)
+  // `);
 
   return (
     <Layout>

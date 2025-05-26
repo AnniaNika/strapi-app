@@ -15,19 +15,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             slug
           }
         }
-        allStrapiHomepage {
-          nodes {
-            id
+        strapiHomepage {
+          Blocks {
+            __typename
           }
         }
-        allStrapiLogin {
-          nodes {
-            Blocks {
-              registerForm
-              id
-              strapi_component
-              strapi_id
-            }
+        strapiAbout {
+          blocks {
+            __typename
           }
         }
       }
@@ -43,18 +38,39 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return;
   }
 
-  result.allStrapiLogin.nodes.forEach((node) => {
-    actions.createPage({
-      path: "/login",
-      component: path.resolve("./src/pages/login.js"),
-    });
+  // result.allStrapiLogin.nodes.forEach((node) => {
+  //   actions.createPage({
+  //     path: "/login",
+  //     component: path.resolve("./src/pages/login.js"),
+  //   });
+  // });
+
+  const homepage = result.data.strapiHomepage;
+
+  if (!homepage) {
+    reporter.panic("strapiHomepage not returned from GraphQL");
+  }
+
+  actions.createPage({
+    path: "/",
+    component: path.resolve("./src/pages/index.js"),
+    context: {
+      homepage,
+    },
   });
 
-  result.allStrapiHomepage.nodes.forEach((node) => {
-    actions.createPage({
-      path: "/",
-      component: path.resolve("./src/pages/index.js"),
-    });
+  const about = result.data.strapiAbout;
+
+  if (!about) {
+    reporter.panic("strapiAbout not returned from GraphQL");
+  }
+
+  actions.createPage({
+    path: "/about",
+    component: path.resolve("./src/pages/about.js"),
+    context: {
+      about,
+    },
   });
 
   const articles = result.data.allStrapiArticle.nodes;

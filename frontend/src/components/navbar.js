@@ -42,9 +42,9 @@ const Navbar = ({ data, global }) => {
 
   return (
     <nav className="h-full space-y-1" aria-label="Sidebar">
-      <div className="logo text-center">
-        <GatsbyImage
-          image={getImage(global[0]?.logo?.localFile)}
+      <div className="logo mx-auto">
+        <img
+          src={global[0]?.logo?.localFile?.url}
           alt="logo image"
           className="mb-8"
         />
